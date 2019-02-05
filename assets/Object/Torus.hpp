@@ -2,5 +2,5 @@
 
 class Torus: public Object{
 public:
-	Torus(int radius, int ratio);
+	Torus(double radius, double ratio);
 }

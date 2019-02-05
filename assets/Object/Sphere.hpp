@@ -5,8 +5,8 @@
 
 class Sphere: public Object {
 private:
-	int radius;
+	double radius;
 	Point centre;
 public:
-	Sphere(int radius, Point centre);
+	Sphere(double radius, Point centre);
 };

@@ -36,6 +36,6 @@ int main(){
 
 	o1.print();
 
-	Sphere s1(3, p1);
+	Sphere s1(16.0, p1);
 	s1.print();
 }
