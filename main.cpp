@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "MyWindow.hpp"
+#include "utils/MyWindow.hpp"
 
 
 int main(int argc, char *argv[]){

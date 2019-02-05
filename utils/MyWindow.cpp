@@ -104,24 +104,10 @@ void MyWindow::draw(){
 
     drawLine(x1, y1, x2, y2);
   }
+}
 
-
-  // grid
-  // int x1 = 256, y1 = 256;
-  //
-  //
-  // for(int i = 0; i < 8; i++){
-  //   drawLine(x1, y1, 64 * i, 0);
-  // }
-  // for(int i = 0; i < 8; i++){
-  //   drawLine(x1, y1, 64 * i, 512);
-  // }
-  // for(int i = 0; i < 8; i++){
-  //   drawLine(x1, y1, 0, 64 * i);
-  // }
-  // for(int i = 0; i <= 8; i++){
-  //   drawLine(x1, y1, 512, 64 * i);
-  // }
+void MyWindow::drawScene(Scene scene){
+	/* TODO */
 }
 
 // bresenham's algorithm

@@ -1,4 +1,5 @@
+utils = utils/MyWindow.hpp utils/MyWindow.cpp
 clean:
 	rm -rf main
-main: main.cpp MyWindow.hpp MyWindow.cpp
-	gcc -o main main.cpp MyWindow.hpp MyWindow.cpp -lX11 -lm
+main: main.cpp $(utils)
+	gcc -o main main.cpp $(utils) -lX11 -lm

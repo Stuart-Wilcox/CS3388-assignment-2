@@ -6,6 +6,8 @@
 #include <X11/Xutil.h>
 #include <X11/Xos.h>
 
+#include "../assets/Scene/Scene.hpp"
+
 class MyWindow {
   private:
     Window rootWindow;
@@ -79,6 +81,11 @@ class MyWindow {
     * draw the needed graphic to the display. in this case it is a long spiral (looks like a bunch of circles)
     */
     void draw();
+
+    /**
+     * draws the given scene to the display
+     */
+    void drawScene(Scene);
 
     /**
     * close the window and destroy it. Window cannot be re-made after this
