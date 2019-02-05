@@ -6,4 +6,5 @@ public:
 	int y;
 	int z;
 	Point(int, int, int);
+	void print();
 };

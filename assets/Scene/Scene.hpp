@@ -13,5 +13,5 @@ private:
 public:
 	Scene();
 	void addObject(Object);
-	void drawScene();
+	std::vector<Object> getObjects();
 };

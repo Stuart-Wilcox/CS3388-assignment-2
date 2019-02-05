@@ -10,4 +10,5 @@ public:
 	Object();
 	void addVertex(Vertex);
 	std::vector<Vertex> getVertices();
+	void print();
 };

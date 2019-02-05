@@ -4,4 +4,4 @@ Scene::Scene();
 
 void Scene::addObject(Object object);
 
-void Scene::drawScene();
+vector<Object> Scene::getObjects();
