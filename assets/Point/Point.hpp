@@ -5,6 +5,13 @@ public:
 	double x;
 	double y;
 	double z;
+	
+	Point(){
+		this->x = 0.0;
+		this->y = 0.0;
+		this->z = 0.0;
+	}
+
 	Point(double, double, double);
 	Point rotateX(double);
 	Point rotateY(double);

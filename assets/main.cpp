@@ -6,6 +6,7 @@
 #include "Vertex/Vertex.hpp"
 #include "Object/Object.hpp"
 #include "Object/Sphere.hpp"
+#include "Object/Torus.hpp"
 
 int main(){
 	Point p1(0,0,0);
@@ -38,4 +39,6 @@ int main(){
 
 	Sphere s1(16.0, p1);
 	s1.print();
+
+	Torus t1(4, 16);
 }

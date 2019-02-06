@@ -1,5 +1,6 @@
 #include <cstdio>
 #include "Point.hpp"
+#include "../../utils/Matrix.hpp"
 
 Point::Point(double x, double y, double z){
 	this->x = x;
@@ -12,7 +13,12 @@ void Point::print(){
 }
 
 Point Point::rotateX(double angle){
-	return Point(0,0,0);
+	Matrix rot = Matrix::getXRotation(angle);
+	Matrix pt = Matrix::fromPoint((*this));
+
+	Matrix newPt = rot * pt;
+
+	return Point(newPt[0][0],newPt[1][0],newPt[2][0]);
 }
 
 Point Point::rotateY(double angle){

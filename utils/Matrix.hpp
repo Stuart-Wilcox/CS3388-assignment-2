@@ -1,5 +1,6 @@
 #include <cmath>
 #include <vector>
+#include "../assets/Point/Point.hpp"
 
 #define PI 3.141592
 
@@ -76,5 +77,14 @@ public:
 		}
 
 		return x;
+	}
+
+	static Matrix fromPoint(Point p){
+		Matrix m(3,1);
+		m[0][0] = p.x;
+		m[1][0] = p.y;
+		m[2][0] = p.z;
+
+		return m;
 	}
 }; 
