@@ -5,4 +5,5 @@
 class Torus: public Object{
 public:
 	Torus(double radius, double ratio);
+	void print();
 };

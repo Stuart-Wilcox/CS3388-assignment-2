@@ -22,11 +22,21 @@ Point Point::rotateX(double angle){
 }
 
 Point Point::rotateY(double angle){
-	return Point(0,0,0);
+	Matrix rot = Matrix::getYRotation(angle);
+	Matrix pt = Matrix::fromPoint((*this));
+
+	Matrix newPt = rot * pt;
+
+	return Point(newPt[0][0], newPt[1][0], newPt[2][0]);
 }
 
 Point Point::rotateZ(double angle){
-	return Point(0,0,0);
+	Matrix rot = Matrix::getZRotation(angle);
+	Matrix pt = Matrix::fromPoint((*this));
+
+	Matrix newPt = rot * pt;
+
+	return Point(newPt[0][0], newPt[1][0], newPt[1][0]);
 }
 
 Point Point::translate(double distance, Point direction){

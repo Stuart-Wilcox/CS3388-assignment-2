@@ -14,11 +14,16 @@ int main(){
 	Point p3(1,2,1);
 	Point p4(0,3,0);
 
-	p1.print();
+	/*
+	 * p1.print();
 	p2.print();
 	p3.print();
 	p4.print();
 
+	Point p5 = p2.rotateY(90.0);
+	p5.print();
+	*/
+	/*
 	Vertex v1(p1, p2);
 	Vertex v2(p2, p3);
 	Vertex v3(p3, p4);
@@ -39,6 +44,8 @@ int main(){
 
 	Sphere s1(16.0, p1);
 	s1.print();
+	*/
 
 	Torus t1(4, 16);
+	t1.print();
 }

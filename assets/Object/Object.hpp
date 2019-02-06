@@ -4,7 +4,7 @@
 #include "../Vertex/Vertex.hpp"
 
 class Object {
-private:
+protected:
 	std::vector<Vertex> vertices;
 public:
 	Object();
