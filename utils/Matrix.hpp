@@ -1,3 +1,4 @@
+#pragma once
 #include <cmath>
 #include <vector>
 #include "../assets/Point/Point.hpp"
@@ -10,16 +11,17 @@ private:
 public:
 	int n;
 	int m;
-	
+
 	Matrix(int n, int m);
-	Matrix(int n, int m, std::vector<std::vector<double>>);
+	Matrix(int n, int m, std::vector<std::vector<double> >);
 
 	void print();
-	
+
 	double* operator[](int);
 	Matrix operator+(Matrix& rhs);
+	Matrix operator-(Matrix& rhs);
 	Matrix operator*(Matrix& rhs);
-	
+
 	static Matrix getXRotation(double angle){
 		angle = (angle * PI) / 180.0;
 
@@ -28,9 +30,9 @@ public:
 			{ 0, cos(angle), -1.0 * sin(angle) },
 			{ 0, sin(angle), cos(angle) }
 		};
-		
+
 		Matrix x(3,3);
-		
+
 		for(int i = 0; i < 3; i++){
 			for(int j = 0; j < 3; j++){
 				x[i][j] = m[i][j];
@@ -57,7 +59,7 @@ public:
 		}
 
 		return x;
-		
+
 	}
 
 	static Matrix getZRotation(double angle){
@@ -87,4 +89,4 @@ public:
 
 		return m;
 	}
-}; 
+};

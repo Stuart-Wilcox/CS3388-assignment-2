@@ -1,8 +1,18 @@
 #include <cstdio>
 #include "Matrix.hpp"
+#include "Camera.hpp"
+#include "../assets/Point/Point.hpp"
 
+void matrix();
+void camera();
 
 int main(){
+	// uncomment a section to inspect it working
+	// matrix();
+	camera();
+}
+
+void matrix(){
 	Matrix m1(2,3);
 	Matrix m2(3,2);
 
@@ -28,4 +38,8 @@ int main(){
 
 	Matrix m4 = m1 * m2;
 	m4.print();
+}
+
+void camera(){
+	Camera camera(Point(0.0,10.0,-30.0), 0.0, 0.0, 0.0);
 }

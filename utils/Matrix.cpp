@@ -12,7 +12,7 @@ Matrix::Matrix(int n, int m){
 	}
 }
 
-Matrix::Matrix(int n, int m, std::vector<std::vector<double>> init){
+Matrix::Matrix(int n, int m, std::vector<std::vector<double> > init){
 	this->n = n;
 	this->m = m;
 
@@ -55,6 +55,23 @@ Matrix Matrix::operator+(Matrix& rhs){
 	return Matrix(0,0);
 }
 
+Matrix Matrix::operator-(Matrix& rhs){
+	// size must be the same in order to subtract
+	if(this->n == rhs.n && this->m == rhs.m){
+		Matrix newMatrix(this->n, this->m);
+
+		for(int i = 0; i < this->n; i++){
+			for(int j = 0; j < this->m; j++){
+				newMatrix[i][j] = this->matrix[i][j] - rhs[i][j];
+			}
+		}
+
+		return newMatrix;
+	}
+
+	return Matrix(0,0);
+}
+
 Matrix Matrix::operator*(Matrix& rhs){
 	// size must match to multiply
 	if(this->m == rhs.n){
@@ -70,7 +87,6 @@ Matrix Matrix::operator*(Matrix& rhs){
 
 		return newMatrix;
 	}
-	
+
 	return Matrix(0,0);
 }
-
