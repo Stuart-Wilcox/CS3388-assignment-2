@@ -11,15 +11,15 @@ Vertex Vertex::translate(Point direction){
 	return Vertex(this->p1.translate(direction), this->p2.translate(direction));
 }
 
-Vertex rotateX(double angle){
+Vertex Vertex::rotateX(double angle){
 	return Vertex(this->p1.rotateX(angle), this->p2.rotateX(angle));
 }
 
-Vertex rotateY(double angle){
+Vertex Vertex::rotateY(double angle){
 	return Vertex(this->p1.rotateY(angle), this->p2.rotateY(angle));
 }
 
-Vertex rotateZ(double angle){
+Vertex Vertex::rotateZ(double angle){
 	return Vertex(this->p1.rotateZ(angle), this->p2.rotateZ(angle));
 }
 

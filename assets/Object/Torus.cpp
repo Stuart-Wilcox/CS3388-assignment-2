@@ -3,12 +3,12 @@
 #include "Torus.hpp"
 
 
-Torus::Torus(double radius, double outerRadius){
+Torus::Torus(double innerRadius, double outerRadius){
 	const double angle = 22.5;
 	
 	// create a circle of 16 points
 	Point circle1[16];	
-	circle1[0] = Point(0.0, 0.0, radius); // first point lies on the x axis
+	circle1[0] = Point(0.0, 0.0, innerRadius); // first point lies on the x axis
 	circle1[0];
 
 	for(int i = 1; i < 16; i++){
@@ -56,10 +56,3 @@ Torus::Torus(double radius, double outerRadius){
 	
 }
 
-void Torus::print(){
-	printf("Torus\n");
-	for(int i = 0; i < this->vertices.size(); i++){
-		printf("\t");
-		this->vertices[i].print();
-	}
-}

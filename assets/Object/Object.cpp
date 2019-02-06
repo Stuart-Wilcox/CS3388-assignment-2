@@ -15,27 +15,28 @@ std::vector<Vertex> Object::getVertices(){
 	return this->vertices;
 };
 
-void translate(Point direction){
+
+void Object::translate(Point direction){
 	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this.vertices[i].translate(direction);
+		this->vertices[i] = this->vertices[i].translate(direction);
 	}
 }
 
-void rotateX(double angle){
+void Object::rotateX(double angle){
 	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this.vertices[i].rotateX(angle);
+		this->vertices[i] = this->vertices[i].rotateX(angle);
 	}
 }
 
-void rotateY(double angle){
+void Object::rotateY(double angle){
 	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this.vertices[i].rotateY(angle);
+		this->vertices[i] = this->vertices[i].rotateY(angle);
 	}
 }
 
-void rotateZ(double angle){
+void Object::rotateZ(double angle){
 	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this.vertices[i].rotateZ(angle);
+		this->vertices[i] = this->vertices[i].rotateZ(angle);
 	}
 }
 
