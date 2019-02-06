@@ -85,7 +85,7 @@ class MyWindow {
     /**
      * draws the given scene to the display
      */
-    void drawScene(Scene);
+    void drawScene();
 
     /**
     * close the window and destroy it. Window cannot be re-made after this

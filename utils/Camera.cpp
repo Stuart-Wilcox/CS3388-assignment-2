@@ -50,7 +50,7 @@ Scene Camera::projectScene(Scene scene){
 
 Object Camera::projectObject(Object object){
   Object o;
-  for(int i = 0; i < object.getVertices.size(); i++){
+  for(int i = 0; i < object.getVertices().size(); i++){
     o.addVertex(this->projectVertex(object.getVertices()[i]));
   }
   return o;
@@ -61,5 +61,5 @@ Vertex Camera::projectVertex(Vertex vertex){
 }
 
 Point Camera::projectPoint(Point point){
-  return Point(point.x, point.y, 0.0);
+  return Point(266+point.x, 256+point.y, 0.0);
 }

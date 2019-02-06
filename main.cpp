@@ -7,6 +7,7 @@
 int main(int argc, char *argv[]){
 	MyWindow window; // create a window
 
+	// window.drawScene();
 	window.show(); // map and display graphic
 
 	return 0;

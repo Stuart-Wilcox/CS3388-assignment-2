@@ -1,5 +1,6 @@
-utils = utils/MyWindow.hpp utils/MyWindow.cpp
+assets = assets/*/*.hpp assets/*/*.cpp
+utils = utils/*.hpp utils/*.cpp
 clean:
 	rm -rf main
-main: main.cpp $(utils)
-	gcc -o main main.cpp $(utils) -lX11 -lm
+main: main.cpp $(assets) $(utils)
+	g++ -o main main.cpp $(assets) $(utils) -lX11 -lm

@@ -1,48 +1,52 @@
 #include <cmath>
 #include <math.h>
 #include <cstdio>
+#include <vector>
 #include "Sphere.hpp"
 #include "Object.hpp"
 
 Sphere::Sphere(double radius) {
-	Point circle[16];
-	circle[0] = Point(0.0, 0.0, radius);
-	double angle = 22.5;
+	this->resolution = 36;
+	double angle = 360 / resolution;
 
-	for(int i = 1; i < 16; i++){
-		circle[i] = circle[i-1].rotateX(angle);
+	std::vector<Point> circle;
+	Point p(0.0, 0.0, radius);
+	circle.push_back(p);
+
+	for(int i = 1; i < this->resolution; i++){
+		p = p.rotateX(angle);
+		circle.push_back(p);
 	}
 
 	// circle is a collection of points in a circle in the YZ plane
-	
-	Point circle2[16];
-	for(int i = 0; i < 16; i++){
-		circle2[i] = circle[i].rotateY(angle);
+
+	std::vector<Point> circle2;
+	for(int i = 0; i < this->resolution + 1; i++){
+		circle2.push_back(circle[i].rotateY(angle));
 	}
 
-	for(int i = 0; i < 16; i++){
+	for(int i = 0; i < this->resolution; i++){
 		// draw line between each of the points on the circle
-		this->addVertex(Vertex(circle2[15], circle2[0]));
-		for(int j = 1; j < 16; j++){
+		this->addVertex(Vertex(circle2[this->resolution-1], circle2[0]));
+		for(int j = 1; j < this->resolution; j++){
 			Vertex v(circle2[j-1],circle2[j]);
 			this->addVertex(v);
 		}
 
 		// draw a line between the two circles
-		for(int j = 0; j < 16; j++){
+		for(int j = 0; j < this->resolution; j++){
 			Vertex v(circle2[j], circle[j]);
 			this->addVertex(v);
 		}
 
 		// copy circle2 into circle
-		for(int j = 0; j < 16; j++){
+		for(int j = 0; j < this->resolution; j++){
 			circle[j] = circle2[j];
 		}
 
 		// rotate circle2 to next spot
-		for(int j = 0; j < 16; j++){
+		for(int j = 0; j < this->resolution; j++){
 			circle2[j] = circle2[j].rotateY(angle);
 		}
 	}
 }
-

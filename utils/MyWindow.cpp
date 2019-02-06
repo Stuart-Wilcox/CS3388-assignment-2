@@ -1,5 +1,11 @@
-#include "MyWindow.hpp"
+#include <cstdio>
 #include <math.h>
+#include "MyWindow.hpp"
+#include "Camera.hpp"
+#include "../assets/Object/Sphere.hpp"
+#include "../assets/Object/Torus.hpp"
+#include "../assets/Object/Cone.hpp"
+#include "../assets/Scene/Scene.hpp"
 
 // simple abs function
 int abs(int x){
@@ -60,13 +66,15 @@ void MyWindow::show(){
   XEvent event; // var to hold events as they come up
 	KeySym key; // needed to get key input
 	char text[255]; // hold key input
+  bool complete = false;
 
 	while(1){
 		XNextEvent(display, &event); // get an event from the window, place into 'event'. This call blocks until an event is captured
 
-		if(event.type == Expose && event.xexpose.count == 0){
-			draw();
+		if(event.type == Expose && event.xexpose.count == 0 && !complete){
+			drawScene();
 			XFlush(display);
+      complete = true;
 		}
 
 		if(event.type == KeyPress && XLookupString(&event.xkey, text, 255, &key, 0) == 1){
@@ -106,8 +114,40 @@ void MyWindow::draw(){
   }
 }
 
-void MyWindow::drawScene(Scene scene){
-	/* TODO */
+void MyWindow::drawScene(){
+
+	Sphere s1(100.0);
+  s1.rotateY(-4.0);
+  s1.rotateZ(-10.0);
+  s1.rotateX(5.0);
+  s1.translate(Point(125.0, -110.0, 0.0));
+
+  Torus t1(70.0, 170.0);
+  t1.rotateY(5.0);
+  t1.rotateX(-30.0);
+  t1.translate(Point(-10.0, 100.0, 0.0));
+
+  Cone c1(100.0, 130.0);
+  c1.rotateX(20.0);
+  c1.rotateZ(180.0);
+  c1.translate(Point(-150.0, -100.0, 0.0));
+
+  Scene scene;
+  scene.addObject(s1);
+  scene.addObject(t1);
+  scene.addObject(c1);
+
+  Camera camera(Point(0.0,10.0,-30.0), 0.0, 0.0, 0.0);
+
+  Scene projected = camera.projectScene(scene);
+
+  for(int i = 0; i < projected.getObjects().size(); i++){
+    Object o = projected.getObjects()[i];
+    for(int j = 0; j < o.getVertices().size(); j++){
+      Vertex v = o.getVertices()[j];
+      drawLine((int)(v.p1.x), (int)(v.p1.y), (int)(v.p2.x), (int)(v.p2.y));
+    }
+  }
 }
 
 // bresenham's algorithm
