@@ -16,7 +16,6 @@ public:
 	Point rotateX(double);
 	Point rotateY(double);
 	Point rotateZ(double);
-	Point translate(double, Point);
 	Point translate(Point);
 	void print();
 };

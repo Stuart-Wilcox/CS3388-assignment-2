@@ -10,5 +10,9 @@ public:
 	Object();
 	void addVertex(Vertex);
 	std::vector<Vertex> getVertices();
+	void translate(Point);
+	void rotateX(double);
+	void rotateY(double);
+	void rotateZ(double);
 	void print();
 };

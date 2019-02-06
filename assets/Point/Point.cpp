@@ -39,10 +39,7 @@ Point Point::rotateZ(double angle){
 	return Point(newPt[0][0], newPt[1][0], newPt[1][0]);
 }
 
-Point Point::translate(double distance, Point direction){
-	return Point(0,0,0);
+Point Point::translate(Point direction){
+	return Point(this->x + direction.x, this->y + direction.y, this->z + direction.z);
 }
 
-Point Point::translate(Point distance){
-	return Point(0,0,0);
-}
