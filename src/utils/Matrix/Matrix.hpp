@@ -1,7 +1,7 @@
 #pragma once
 #include <cmath>
 #include <vector>
-#include "../assets/Point/Point.hpp"
+#include "../../assets/Point/Point.hpp"
 
 #define PI 3.141592
 

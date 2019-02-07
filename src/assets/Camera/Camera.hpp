@@ -1,9 +1,9 @@
 #pragma once
-#include "Matrix.hpp"
-#include "../assets/Point/Point.hpp"
-#include "../assets/Edge/Edge.hpp"
-#include "../assets/Object/Object.hpp"
-#include "../assets/Scene/Scene.hpp"
+#include "../../utils/Matrix/Matrix.hpp"
+#include "../Point/Point.hpp"
+#include "../Edge/Edge.hpp"
+#include "../Object/Object.hpp"
+#include "../Scene/Scene.hpp"
 
 /*
  * Represents a camera object, which captures the 3D scene and provides the projection ont the screen

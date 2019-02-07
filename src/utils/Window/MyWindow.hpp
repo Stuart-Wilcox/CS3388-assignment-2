@@ -6,8 +6,8 @@
 #include <X11/Xutil.h>
 #include <X11/Xos.h>
 
-#include "../assets/Scene/Scene.hpp"
-#include "Camera.hpp"
+#include "../../assets/Scene/Scene.hpp"
+#include "../../assets/Camera/Camera.hpp"
 
 class MyWindow {
   private:

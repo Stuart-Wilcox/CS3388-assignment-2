@@ -1,6 +1,6 @@
 #include <cstdio>
 #include "Point.hpp"
-#include "../../utils/Matrix.hpp"
+#include "../../utils/Matrix/Matrix.hpp"
 
 Point::Point(double x, double y, double z){
 	this->x = x;
@@ -42,4 +42,3 @@ Point Point::rotateZ(double angle){
 Point Point::translate(Point direction){
 	return Point(this->x + direction.x, this->y + direction.y, this->z + direction.z);
 }
-

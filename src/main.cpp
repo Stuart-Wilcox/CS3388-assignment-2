@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "utils/MyWindow.hpp"
-#include "utils/Camera.hpp"
+#include "utils/Window/MyWindow.hpp"
+#include "assets/Camera/Camera.hpp"
 #include "assets/Scene/Scene.hpp"
 #include "assets/Object/Sphere.hpp"
 #include "assets/Object/Torus.hpp"
@@ -18,8 +18,8 @@ Camera getCamera5();
 int main(int argc, char *argv[]){
 	MyWindow window; // create a window
 
-	window.scene = getScene();
-	window.camera = getCamera2();
+	window.scene = getScene(); // set the window's scene
+	window.camera = getCamera2(); // set the window's camera
 
 	window.show(); // map and display graphic
 

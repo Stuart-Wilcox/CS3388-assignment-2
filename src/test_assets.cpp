@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <cstdio>
 #include <vector>
-#include "Point/Point.hpp"
-#include "Edge/Edge.hpp"
-#include "Object/Object.hpp"
-#include "Object/Sphere.hpp"
-#include "Object/Torus.hpp"
-#include "Scene/Scene.hpp"
+#include "assets/Point/Point.hpp"
+#include "assets/Edge/Edge.hpp"
+#include "assets/Object/Object.hpp"
+#include "assets/Object/Sphere.hpp"
+#include "assets/Object/Torus.hpp"
+#include "assets/Scene/Scene.hpp"
 
 void point();
 void edge();
@@ -23,7 +23,7 @@ int main(){
 	// object();
 	// sphere();
 	// torus();
-	scene();
+	// scene();
 }
 
 void point(){

@@ -1,12 +1,12 @@
 #include <cstdio>
 #include <math.h>
 #include "MyWindow.hpp"
-#include "Camera.hpp"
-#include "../assets/Object/Sphere.hpp"
-#include "../assets/Object/Torus.hpp"
-#include "../assets/Object/Cone.hpp"
-#include "../assets/Object/Coordinates.hpp"
-#include "../assets/Scene/Scene.hpp"
+#include "../../assets/Camera/Camera.hpp"
+#include "../../assets/Object/Sphere.hpp"
+#include "../../assets/Object/Torus.hpp"
+#include "../../assets/Object/Cone.hpp"
+#include "../../assets/Object/Coordinates.hpp"
+#include "../../assets/Scene/Scene.hpp"
 
 // simple abs function
 int abs(int x){
