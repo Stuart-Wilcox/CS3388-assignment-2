@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
 	window.scene = getScene(); // set the window's scene
 
 	/* CHANGE BELOW LINE TO USE A DIFFERENT CAMERAS */
-	window.camera = getCamera2(); // set the window's camera
+	window.camera = getCamera5(); // set the window's camera
 
 	window.show(); // map and display graphic
 
