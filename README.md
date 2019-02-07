@@ -23,7 +23,27 @@ To assist you in this assignment, you are given a program that sets up the camer
 ![result](http://www.csd.uwo.ca/faculty/beau/CS3388/CS3388-Assign2-Output-Image.png "Resulting Image")
 
 ## Instructions to run
-1. Make sure you have xlib11 installed. To install it, try `pacman -S xlib11-dev` (in arch linux), probably same name in other package managers.
-2. Compile the program by running `make main`
-3. Run the program by using `./main`. It should open a window with the expected graphic displayed
-4. Close the window by typing 'q' or clicking the 'X' button
+### Prerequisites
+  1. Make sure you have g++ installed. I am using `version 8.2.1`.
+	2. Make sure you have xlib11 installed. To install it, try `pacman -S xlib11-dev` (in arch linux), probably same name in other package managers.
+### Building
+	1. Compile the program by running `make main` from the project root directory.
+### Running
+	1. Run the program by using `./bin/main`. It should open a window with the expected graphic displayed
+	2. Close the window by typing 'q' or clicking the 'X' button
+### Changing Camera Angles
+  1. Edit `src/main.cpp` and change the camera used. There are 5 pre-built camera that can be used, so just change `src/main.cpp: line 24`.
+	```
+	int main(int argc, char *argv[]){
+		MyWindow window; // create a window
+
+		window.scene = getScene(); // set the window's scene
+
+		/* CHANGE BELOW LINE TO USE A DIFFERENT CAMERAS */
+		window.camera = getCamera2(); // set the window's camera
+
+		window.show(); // map and display graphic
+
+		return 0;
+	}
+	```

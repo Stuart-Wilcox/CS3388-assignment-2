@@ -1,7 +1,7 @@
 /* Simple test program to confirm functionality of utils */
 #include <cstdio>
 #include "utils/Matrix/Matrix.hpp"
-#include "utils/Camera/Camera.hpp"
+#include "assets/Camera/Camera.hpp"
 #include "assets/Point/Point.hpp"
 
 void matrix();
