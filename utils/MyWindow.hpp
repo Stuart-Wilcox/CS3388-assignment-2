@@ -7,6 +7,7 @@
 #include <X11/Xos.h>
 
 #include "../assets/Scene/Scene.hpp"
+#include "Camera.hpp"
 
 class MyWindow {
   private:
@@ -67,6 +68,9 @@ class MyWindow {
     void drawLineHigh(int x1, int y1, int x2, int y2);
 
   public:
+    Scene scene;
+    Camera camera;
+
     /**
     * default constructor, creates and initializes window, but does not display it
     */

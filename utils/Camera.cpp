@@ -1,11 +1,18 @@
 #include <cmath>
 #include "Camera.hpp"
 
-Camera::Camera(Point position, double angleX, double angleY, double angleZ): camera(3,3), position(0,0,0) {
+#define PI 3.141592
+
+Camera::Camera(): camera(3,3), position(0,0,0), orientation(0,0,0) {}
+
+Camera::Camera(Point position, double angleX, double angleY, double angleZ): camera(3,3), position(0,0,0), orientation(0,0,0) {
+  angleX = (PI * angleX) / 180.0;
+  angleY = (PI * angleY) / 180.0;
+  angleZ = (PI * angleZ) / 180.0;
+
   this->position.x = position.x;
   this->position.y = position.y;
   this->position.z = position.z;
-
 
   double c1[3][3] = {
     { 1, 0, 0 },
@@ -61,5 +68,26 @@ Vertex Camera::projectVertex(Vertex vertex){
 }
 
 Point Camera::projectPoint(Point point){
-  return Point(266+point.x, 256+point.y, 0.0);
+  Point a = this->position;
+  Point b(0,0,0);
+  Point c = point;
+  Point d(0,0,0);
+  Point e(0,0, 300.0);
+
+  Matrix tempA = Matrix::fromPoint(a);
+  Matrix tempC = Matrix::fromPoint(c);
+  Matrix tempDiff = tempA - tempC;
+  Matrix tempD = this->camera * tempDiff;
+
+  d = Matrix::toPoint(tempD);
+
+  b.x = (d.x*(e.z/d.z)) + e.x;
+  b.y = (d.y*(e.z/d.z)) + e.y;
+  // b.x = (c.x - a.x) * (factor * (b.z - a.z) / (c.z - a.z));
+  // b.y = (c.y - a.y) * (factor * (b.z - a.z) / (c.z - a.z));
+
+  b.x += 256;
+  b.y += 256;
+
+  return b;
 }

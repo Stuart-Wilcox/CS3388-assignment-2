@@ -89,4 +89,12 @@ public:
 
 		return m;
 	}
+
+	static Point toPoint(Matrix m){
+		if(m.n == 3 && m.m == 1){
+			return Point(m[0][0], m[1][0], m[2][0]);
+		}
+
+		return Point(0.0,0.0,0.0);
+	}
 };

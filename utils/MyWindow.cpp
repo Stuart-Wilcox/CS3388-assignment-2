@@ -5,6 +5,7 @@
 #include "../assets/Object/Sphere.hpp"
 #include "../assets/Object/Torus.hpp"
 #include "../assets/Object/Cone.hpp"
+#include "../assets/Object/Coordinates.hpp"
 #include "../assets/Scene/Scene.hpp"
 
 // simple abs function
@@ -115,30 +116,6 @@ void MyWindow::draw(){
 }
 
 void MyWindow::drawScene(){
-
-	Sphere s1(100.0);
-  s1.rotateY(-4.0);
-  s1.rotateZ(-10.0);
-  s1.rotateX(5.0);
-  s1.translate(Point(125.0, -110.0, 0.0));
-
-  Torus t1(70.0, 170.0);
-  t1.rotateY(5.0);
-  t1.rotateX(-30.0);
-  t1.translate(Point(-10.0, 100.0, 0.0));
-
-  Cone c1(100.0, 130.0);
-  c1.rotateX(20.0);
-  c1.rotateZ(180.0);
-  c1.translate(Point(-150.0, -100.0, 0.0));
-
-  Scene scene;
-  scene.addObject(s1);
-  scene.addObject(t1);
-  scene.addObject(c1);
-
-  Camera camera(Point(0.0,10.0,-30.0), 0.0, 0.0, 0.0);
-
   Scene projected = camera.projectScene(scene);
 
   for(int i = 0; i < projected.getObjects().size(); i++){

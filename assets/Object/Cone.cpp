@@ -5,7 +5,7 @@
 
 
 Cone::Cone(double radius, double height){
-  this->resolution = 36;
+  this->resolution = 16;
 
   const double angle = 360.0 / this->resolution;
 

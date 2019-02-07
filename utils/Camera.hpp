@@ -12,6 +12,7 @@ class Camera {
 public:
   Matrix camera;
   Point position;
+  Point orientation;
 
   /*
    * Projects a single point
@@ -29,6 +30,11 @@ public:
      Object projectObject(Object);
 
 public:
+  /*
+   * Default ctor
+   */
+  Camera();
+
   /*
    * Creates a new camera at the given point, with Tait-Bryan angles given
    */
