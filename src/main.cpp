@@ -54,17 +54,17 @@ Camera getCamera1(){
 }
 
 Camera getCamera2(){
-	return Camera(Point(0.0, 150.0, 0.0), 0.0, 0.0, 5.0);
+	return Camera(Point(450.0, 150.0, -450.0), 0.0, 90.0, 0.0);
 }
 
 Camera getCamera3(){
-	return Camera(Point(0.0, 150.0, 0.0), 0.0, 5.0, 0.0);
+	return Camera(Point(0.0, 150.0, -900.0), 0.0, 180.0, 0.0);
 }
 
 Camera getCamera4(){
-	return Camera(Point(0.0, 150.0, 0.0), 5.0, 0.0, 0.0);
+	return Camera(Point(-450.0, -300.0, -600.0), 45.0, 270.0, 0.0);
 }
 
 Camera getCamera5(){
-	return Camera(Point(0.0, 150.0, 0.0), 5.0, 5.0, 0.0);
+	return Camera(Point(0.0, 400.0, 0.0), 315.0, 0.0, 0.0);
 }

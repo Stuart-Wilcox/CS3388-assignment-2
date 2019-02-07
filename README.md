@@ -47,3 +47,10 @@ To assist you in this assignment, you are given a program that sets up the camer
 		return 0;
 	}
 	```
+
+## Output
+![camera1](photos/Camera1.png)
+![camera2](photos/Camera2.png)
+![camera3](photos/Camera3.png)
+![camera4](photos/Camera4.png)
+![camera5](photos/Camera5.png)
