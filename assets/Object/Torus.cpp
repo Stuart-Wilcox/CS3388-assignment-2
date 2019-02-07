@@ -34,15 +34,15 @@ Torus::Torus(double innerRadius, double outerRadius){
 	for(int i = 0; i < this->resolution; i++){
 		// conect previous circle with current
 		for(int j = 0; j < this->resolution; j++){
-			Vertex v(circle1[j], circle2[j]);
-			this->addVertex(v);
+			Edge v(circle1[j], circle2[j]);
+			this->addEdge(v);
 		}
 
 		// connect the circle points with one another
-		this->addVertex(Vertex(circle2[0], circle2[this->resolution-1]));
+		this->addEdge(Edge(circle2[0], circle2[this->resolution-1]));
 		for(int j = 1; j < this->resolution; j++){
-			Vertex v(circle2[j-1], circle2[j]);
-			this->addVertex(v);
+			Edge v(circle2[j-1], circle2[j]);
+			this->addEdge(v);
 		}
 
 		// copy circle2 into circle1

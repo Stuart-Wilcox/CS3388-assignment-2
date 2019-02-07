@@ -27,16 +27,16 @@ Sphere::Sphere(double radius) {
 
 	for(int i = 0; i < this->resolution; i++){
 		// draw line between each of the points on the circle
-		this->addVertex(Vertex(circle2[this->resolution-1], circle2[0]));
+		this->addEdge(Edge(circle2[this->resolution-1], circle2[0]));
 		for(int j = 1; j < this->resolution; j++){
-			Vertex v(circle2[j-1],circle2[j]);
-			this->addVertex(v);
+			Edge v(circle2[j-1],circle2[j]);
+			this->addEdge(v);
 		}
 
 		// draw a line between the two circles
 		for(int j = 0; j < this->resolution; j++){
-			Vertex v(circle2[j], circle[j]);
-			this->addVertex(v);
+			Edge v(circle2[j], circle[j]);
+			this->addEdge(v);
 		}
 
 		// copy circle2 into circle

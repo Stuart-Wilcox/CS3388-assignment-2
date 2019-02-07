@@ -11,10 +11,10 @@ Coordinates::Coordinates(){
 	Point zMax(0,0,1024);
 	Point zMin(0,0,-1024);
 
-	this->addVertex(Vertex(origin, xMax));
-	this->addVertex(Vertex(origin, xMin));
-	this->addVertex(Vertex(origin, yMax));
-	this->addVertex(Vertex(origin, yMin));
-	this->addVertex(Vertex(origin, zMax));
-	this->addVertex(Vertex(origin, zMin));
+	this->addEdge(Edge(origin, xMax));
+	this->addEdge(Edge(origin, xMin));
+	this->addEdge(Edge(origin, yMax));
+	this->addEdge(Edge(origin, yMin));
+	this->addEdge(Edge(origin, zMax));
+	this->addEdge(Edge(origin, zMin));
 }

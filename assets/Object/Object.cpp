@@ -1,49 +1,49 @@
 #include <cstdio>
 #include <vector>
 #include "Object.hpp"
-#include "../Vertex/Vertex.hpp"
+#include "../Edge/Edge.hpp"
 
 
-Object::Object(): vertices() {
+Object::Object(): edges() {
 }
 
-void Object::addVertex(Vertex vertex){
-	this->vertices.push_back(vertex);
+void Object::addEdge(Edge edge){
+	this->edges.push_back(edge);
 }
 
-std::vector<Vertex> Object::getVertices(){
-	return this->vertices;
+std::vector<Edge> Object::getEdges(){
+	return this->edges;
 };
 
 
 void Object::translate(Point direction){
-	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this->vertices[i].translate(direction);
+	for(int i = 0; i < this->edges.size(); i++){
+		this->edges[i] = this->edges[i].translate(direction);
 	}
 }
 
 void Object::rotateX(double angle){
-	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this->vertices[i].rotateX(angle);
+	for(int i = 0; i < this->edges.size(); i++){
+		this->edges[i] = this->edges[i].rotateX(angle);
 	}
 }
 
 void Object::rotateY(double angle){
-	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this->vertices[i].rotateY(angle);
+	for(int i = 0; i < this->edges.size(); i++){
+		this->edges[i] = this->edges[i].rotateY(angle);
 	}
 }
 
 void Object::rotateZ(double angle){
-	for(int i = 0; i < this->vertices.size(); i++){
-		this->vertices[i] = this->vertices[i].rotateZ(angle);
+	for(int i = 0; i < this->edges.size(); i++){
+		this->edges[i] = this->edges[i].rotateZ(angle);
 	}
 }
 
 void Object::print(){
 	printf("Object\n");
-	for(int i = 0; i < this->vertices.size(); i++){
+	for(int i = 0; i < this->edges.size(); i++){
 		printf("\t");
-		this->vertices[i].print();
+		this->edges[i].print();
 	}
 }

@@ -21,10 +21,10 @@ Cone::Cone(double radius, double height){
 
   Point top(0.0,height,0.0);
   // connect everything together
-  this->addVertex(Vertex(circle[0], top));
-  this->addVertex(Vertex(circle[0], circle[this->resolution-1]));
+  this->addEdge(Edge(circle[0], top));
+  this->addEdge(Edge(circle[0], circle[this->resolution-1]));
   for(int i = 1; i < this->resolution; i++){
-    this->addVertex(Vertex(circle[i], top));
-    this->addVertex(Vertex(circle[i], circle[i-1]));
+    this->addEdge(Edge(circle[i], top));
+    this->addEdge(Edge(circle[i], circle[i-1]));
   }
 }

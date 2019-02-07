@@ -57,14 +57,14 @@ Scene Camera::projectScene(Scene scene){
 
 Object Camera::projectObject(Object object){
   Object o;
-  for(int i = 0; i < object.getVertices().size(); i++){
-    o.addVertex(this->projectVertex(object.getVertices()[i]));
+  for(int i = 0; i < object.getEdges().size(); i++){
+    o.addEdge(this->projectEdge(object.getEdges()[i]));
   }
   return o;
 }
 
-Vertex Camera::projectVertex(Vertex vertex){
-  return Vertex(this->projectPoint(vertex.p1), this->projectPoint(vertex.p2));
+Edge Camera::projectEdge(Edge vertex){
+  return Edge(this->projectPoint(vertex.p1), this->projectPoint(vertex.p2));
 }
 
 Point Camera::projectPoint(Point point){

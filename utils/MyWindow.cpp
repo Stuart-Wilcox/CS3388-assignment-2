@@ -120,8 +120,8 @@ void MyWindow::drawScene(){
 
   for(int i = 0; i < projected.getObjects().size(); i++){
     Object o = projected.getObjects()[i];
-    for(int j = 0; j < o.getVertices().size(); j++){
-      Vertex v = o.getVertices()[j];
+    for(int j = 0; j < o.getEdges().size(); j++){
+      Edge v = o.getEdges()[j];
       drawLine((int)(v.p1.x), (int)(v.p1.y), (int)(v.p2.x), (int)(v.p2.y));
     }
   }

@@ -3,14 +3,14 @@
 #include <cstdio>
 #include <vector>
 #include "Point/Point.hpp"
-#include "Vertex/Vertex.hpp"
+#include "Edge/Edge.hpp"
 #include "Object/Object.hpp"
 #include "Object/Sphere.hpp"
 #include "Object/Torus.hpp"
 #include "Scene/Scene.hpp"
 
 void point();
-void vertex();
+void edge();
 void object();
 void sphere();
 void torus();
@@ -19,7 +19,7 @@ void scene();
 int main(){
 	// uncomment one of these to inspect it working
 	// point();
-	// vertex();
+	// edge();
 	// object();
 	// sphere();
 	// torus();
@@ -39,14 +39,14 @@ void point(){
 	p3.translate(p2).print();
 }
 
-void vertex(){
+void edge(){
 	Point p1(0,0,0);
 	Point p2(0,0,1);
 	Point p3(1,1,1);
 
-	Vertex v1(p1,p2);
-	Vertex v2(p1,p3);
-	Vertex v3(p2,p3);
+	Edge v1(p1,p2);
+	Edge v2(p1,p3);
+	Edge v3(p2,p3);
 
 	v1.print();
 	v2.print();
@@ -66,34 +66,34 @@ void object(){
 	Point p7(1,1,1);
 	Point p8(0,1,1);
 
-	Vertex v1(p1,p2);
-	Vertex v2(p2,p3);
-	Vertex v3(p3,p4);
-	Vertex v4(p4,p1);
+	Edge v1(p1,p2);
+	Edge v2(p2,p3);
+	Edge v3(p3,p4);
+	Edge v4(p4,p1);
 
-	Vertex v5(p5,p6);
-	Vertex v6(p6,p7);
-	Vertex v7(p7,p8);
-	Vertex v8(p8,p1);
+	Edge v5(p5,p6);
+	Edge v6(p6,p7);
+	Edge v7(p7,p8);
+	Edge v8(p8,p1);
 
-	Vertex v9(p1,p5);
-	Vertex v10(p2,p6);
-	Vertex v11(p3,p7);
-	Vertex v12(p4,p8);
+	Edge v9(p1,p5);
+	Edge v10(p2,p6);
+	Edge v11(p3,p7);
+	Edge v12(p4,p8);
 
 	Object o1;
-	o1.addVertex(v1);
-	o1.addVertex(v2);
-	o1.addVertex(v3);
-	o1.addVertex(v4);
-	o1.addVertex(v5);
-	o1.addVertex(v6);
-	o1.addVertex(v7);
-	o1.addVertex(v8);
-	o1.addVertex(v9);
-	o1.addVertex(v10);
-	o1.addVertex(v11);
-	o1.addVertex(v12);
+	o1.addEdge(v1);
+	o1.addEdge(v2);
+	o1.addEdge(v3);
+	o1.addEdge(v4);
+	o1.addEdge(v5);
+	o1.addEdge(v6);
+	o1.addEdge(v7);
+	o1.addEdge(v8);
+	o1.addEdge(v9);
+	o1.addEdge(v10);
+	o1.addEdge(v11);
+	o1.addEdge(v12);
 
 	o1.print();
 	o1.rotateY(90.0);
@@ -123,4 +123,3 @@ void scene(){
 
 	scene.print();
 }
-

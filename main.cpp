@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 #include "utils/MyWindow.hpp"
-#include "assets/Scene/Scene.hpp"
 #include "utils/Camera.hpp"
+#include "assets/Scene/Scene.hpp"
 #include "assets/Object/Sphere.hpp"
 #include "assets/Object/Torus.hpp"
 #include "assets/Object/Cone.hpp"

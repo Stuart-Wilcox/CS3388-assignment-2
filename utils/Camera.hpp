@@ -1,7 +1,7 @@
 #pragma once
 #include "Matrix.hpp"
 #include "../assets/Point/Point.hpp"
-#include "../assets/Vertex/Vertex.hpp"
+#include "../assets/Edge/Edge.hpp"
 #include "../assets/Object/Object.hpp"
 #include "../assets/Scene/Scene.hpp"
 
@@ -22,7 +22,7 @@ public:
    /*
     * Projects a single vertex
     */
-    Vertex projectVertex(Vertex);
+    Edge projectEdge(Edge);
 
     /*
      * Projects a single object

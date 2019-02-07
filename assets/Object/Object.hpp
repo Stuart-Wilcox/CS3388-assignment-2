@@ -1,13 +1,13 @@
 #pragma once
 #include <vector>
-#include "../Vertex/Vertex.hpp"
+#include "../Edge/Edge.hpp"
 
 /*
  * Represents an abstract 3D object, which is a collection of vertices
  * */
 class Object {
 protected:
-	std::vector<Vertex> vertices;
+	std::vector<Edge> edges;
 public:
 	/*
 	 * Creates a new object with no vertices
@@ -15,14 +15,14 @@ public:
 	Object();
 
 	/*
-	 * Adds a vertex to the object's vertices
+	 * Adds a Edge to the object's vertices
 	 * */
-	void addVertex(Vertex);
+	void addEdge(Edge);
 
 	/*
 	 * Returns a vector of the object's vertices
 	 * */
-	std::vector<Vertex> getVertices();
+	std::vector<Edge> getEdges();
 
 	/*
 	 * Translates the object, using the given point as a direction vector
