@@ -1,4 +1,5 @@
-#pragma once
+#ifndef POINT_H
+#define POINT_H
 
 /*
  * Represents a point in 3D space.
@@ -9,7 +10,7 @@ public:
 	double x;
 	double y;
 	double z;
-	
+
 	/*
 	 * Creates a new point at the origin
 	 * */
@@ -49,3 +50,5 @@ public:
 	 * */
 	void print();
 };
+
+#endif

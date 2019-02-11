@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TORUS_H
+#define TORUS_H
+
 #include "Object.hpp"
 
 /*
@@ -13,3 +15,5 @@ public:
 	 * */
 	Torus(double, double);
 };
+
+#endif

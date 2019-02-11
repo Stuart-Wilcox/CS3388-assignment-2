@@ -1,4 +1,6 @@
-#pragma once
+#ifndef CAMERA_H
+#define CAMERA_H
+
 #include "../../utils/Matrix/Matrix.hpp"
 #include "../Point/Point.hpp"
 #include "../Edge/Edge.hpp"
@@ -45,3 +47,5 @@ public:
    */
    Scene projectScene(Scene);
 };
+
+#endif

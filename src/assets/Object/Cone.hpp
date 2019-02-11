@@ -1,4 +1,6 @@
-#pragma once
+#ifndef CONE_H
+#define CONE_H
+
 #include "Object.hpp"
 
 /*
@@ -13,3 +15,5 @@
    */
    Cone(double, double);
  };
+
+#endif

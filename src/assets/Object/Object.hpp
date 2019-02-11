@@ -1,4 +1,7 @@
-#pragma once
+#ifndef OBJECT_H
+#define OBJECT_H
+
+
 #include <vector>
 #include "../Edge/Edge.hpp"
 
@@ -53,3 +56,5 @@ public:
 	 * */
 	void print();
 };
+
+#endif

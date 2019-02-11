@@ -1,4 +1,6 @@
-#pragma once
+#ifndef EDGE_H
+#define EDGE_H
+
 #include "../Point/Point.hpp"
 
 /*
@@ -40,3 +42,5 @@ public:
 	 * */
 	void print();
 };
+
+#endif

@@ -1,4 +1,7 @@
-#pragma once
+#ifndef SCENE_H
+#define SCENE_H
+
+
 #include <vector>
 #include "../Object/Object.hpp"
 
@@ -33,3 +36,5 @@ public:
 	 * */
 	void print();
 };
+
+#endif

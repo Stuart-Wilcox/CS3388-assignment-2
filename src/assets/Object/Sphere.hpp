@@ -1,4 +1,6 @@
-#pragma once
+#ifndef SPHERE_H
+#define SPHERE_H
+
 #include "Object.hpp"
 #include "../Point/Point.hpp"
 
@@ -15,3 +17,5 @@ public:
 	 * */
 	Sphere(double radius);
 };
+
+#endif

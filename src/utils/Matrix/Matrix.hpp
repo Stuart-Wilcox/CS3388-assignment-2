@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MATRIX_H
+#define MATRIX_H
+
 #include <cmath>
 #include <vector>
 #include "../../assets/Point/Point.hpp"
@@ -98,3 +100,5 @@ public:
 		return Point(0.0,0.0,0.0);
 	}
 };
+
+#endif

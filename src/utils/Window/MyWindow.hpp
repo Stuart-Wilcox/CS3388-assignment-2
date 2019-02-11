@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MYWINDOW_H
+#define MYWINDOW_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -96,3 +97,5 @@ class MyWindow {
     */
     void close();
 };
+
+#endif
